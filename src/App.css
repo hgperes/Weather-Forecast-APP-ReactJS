@@ -1,38 +1,96 @@
-.App {
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.search{
+  background: linear-gradient(60deg, #49a09d, #5f2c82, royalblue, #4ccadd); /*royalblue;*/
+  background-repeat: no-repeat;
+  padding: 40px;
   text-align: center;
+  animation: colors 15s ease infinite;
+  background-size: 300% 300%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes colors {
+  0% {
+    background-position: 0% 25%;
+  }
+  25% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 0% 75%;
+  }
+  75% {
+    background-position: 75% 100%;
+  }
+  100% {
+    background-position: 0% 25%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.search h2{
   color: white;
+  padding: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.search input[type="text"]{
+  width: 60%;
+  height: 40px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: aliceblue;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.botao{
+  background-color: #49a09d;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: 15px;
+  font-weight: bold;
+  -webkit-transition-duration: 0.4s;  
+  transition-duration: 0.4s;   
 }
+
+.botao:hover {  
+  -webkit-transform: translateY(-5px);  
+  -ms-transform: translateY(-5px);  
+  transform: translateY(-5px);
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+  opacity: 0.8;
+} 
+
+.containerCidade{
+  text-align: center;
+  background-color: aliceblue;
+  padding-top: 0.5%;
+  padding-bottom: 5%;
+}
+
+.containerCidade p{
+  border-bottom: 1px #ccc;
+  padding: 10px 0;
+  font-weight:bold;
+  background-color: aliceblue;
+}
+
+.containerCidade img{
+  height: 300px;
+}
+
+.containerCidade p:hover{
+  -webkit-transform: translateY(-2px);  
+  -ms-transform: translateY(-2px);  
+  transform: translateY(-2px);
+  -webkit-transition-duration: 0.4s;  
+  transition-duration: 0.4s;
+}
+
